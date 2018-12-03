@@ -12,15 +12,13 @@ import { environment } from '../environments/environment';
 
   connect(): Rx.Subject<any> {
 
+    //get data from backend (Node.js) using socket.io
     this.socket = io(environment.ws_url);
     let observable = new Observable(observer => {
       this.socket.on('appStatus', (data) => {
         observer.next(data);
       })
       this.socket.on('random', (data) => {
-        observer.next(data);
-      })
-      this.socket.on('cpu', (data) => {
         observer.next(data);
       })
       return () => {

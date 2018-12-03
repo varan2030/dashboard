@@ -17,6 +17,8 @@ export class DashboardComponent implements OnInit {
   public appName;
   public appData;
 
+//Handle data from backend to display appStatus
+
   ngOnInit() {
     this.nodeServerService.sendAppStatus('appStatus');
     this.nodeServerService.appStatus.subscribe(appStatus => {
@@ -25,7 +27,7 @@ export class DashboardComponent implements OnInit {
 
   }
 
-
+//Create a color coded score card components for each application according to the returned status in the previous step
   getColor(status){
     switch (status) {
       case 'Critical':
@@ -37,6 +39,7 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+// Get app name by click
   cardClicked(name){
     this.appName = name;
   }

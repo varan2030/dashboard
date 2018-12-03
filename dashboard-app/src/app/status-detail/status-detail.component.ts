@@ -33,6 +33,8 @@ export class StatusDetailComponent implements OnInit {
 
     }
 
+  // creating chart function 
+
   createChart(){
     let dataPoints = [];
     let dpsLength = 0;
@@ -64,7 +66,7 @@ export class StatusDetailComponent implements OnInit {
       }]
     });
 
-
+// handle random number data from node.js and socket.io
     this.nodeServerService.sendAppStatus('random');
     this.nodeServerService.appStatus.subscribe(random => {
        this.timer = random.timer;
@@ -80,6 +82,7 @@ export class StatusDetailComponent implements OnInit {
       }
       chart.render();
     
+      //handle time
       if (this.seconds > 59){
         this.minutes++;
           this.seconds = 0;
@@ -94,7 +97,7 @@ export class StatusDetailComponent implements OnInit {
     })}
 
     
-
+//back button function
   goBack(): void {
     this.location.back();
   }
