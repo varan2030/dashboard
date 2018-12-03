@@ -16,7 +16,7 @@
 
 ### Page 1
 
-![alt text](https://github.com/varan2030/dashboard/tree/master/dashboard-app/src/assets/images/page1.png)
+![alt text](https://github.com/varan2030/dashboard/blob/master/dashboard-app/src/assets/images/page1.png)
 
 
 ### Page 2
@@ -25,4 +25,4 @@
 
 - Chart content is being updated every 1 sec (Live – Chart)
 
-![alt text](https://github.com/varan2030/dashboard/tree/master/dashboard-app/src/assets/images/page2.png)
+![alt text](https://github.com/varan2030/dashboard/blob/master/dashboard-app/src/assets/images/page2.png)
