@@ -1,0 +1,21 @@
+<div class="container text-center">
+  <h1>Overall Aplication Status </h1>
+  <hr>
+<div *ngIf="appData">
+  <div
+  routerLink="/detail/"
+  class="d-inline-block card"
+  *ngFor="let app of appData"
+  [ngStyle]="{'background-color':getColor(app.status)}"
+  routerLink="/detail/{{app.name}}"
+  >
+      <div class="card-body (click)='cardClicked({{app.name}})'">
+        <h3 class="card-title">{{app.name}}</h3>
+        <hr>
+        <h5>Status</h5>
+        <h4 class="card-subtitle ">{{app.status}}</h4>
+      </div>
+    </div>
+</div>
+</div>
+

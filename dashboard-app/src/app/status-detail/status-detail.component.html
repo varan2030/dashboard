@@ -1,0 +1,26 @@
+<div class='text-center'>
+  <h1>Live Chart</h1> <!--aza-->
+  <div class="row text-center">
+    <div class="col-md-3">
+      <div class="icon">
+         <h3>{{this.route.snapshot.paramMap.get('name')}}</h3> 
+      </div>
+      <hr>
+      <div class='icon'>{{timer}}</div>
+      <hr>
+      <div class='icon'>Incidents</div>
+      <hr>
+      <div class='icon'>Anomalist Features</div>
+      <hr>
+      <div class="icon"><span>{{hours}} h </span><span>{{minutes}} m </span>{{seconds}}</div>
+      <hr>
+      <button type="button" class="btn btn-dark" routerLink="/">Back</button>
+    </div>
+    <div class="col-md-9">
+      <div id="chartContainer" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div>
+    </div>
+    
+  </div>
+  </div>
+  
+  
